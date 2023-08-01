@@ -17,13 +17,9 @@ public class Main {
             return;
         }
 
-        int CONVOLUTIONS = 20;
-        for(int i=0; i<CONVOLUTIONS; i++) {
-            System.out.println("Starting Iteration "+(i+1)+"...");
-            GaussianBlur gb = new GaussianBlur(img);
-            img = gb.gaussianBlur();
-            System.out.println("Iteration "+(i+1)+" Completed!");
-        }
+        GaussianBlur gb = new GaussianBlur(img);
+        img = gb.gaussianBlur(10);
+
         try {
             ImageIO.write(img, "png", new File("output/result.png"));
             System.out.println("Image Saved Successfully!");

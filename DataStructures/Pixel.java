@@ -95,6 +95,7 @@ public class Pixel {
         this.b=Pixel.getBlue(this.rgb);
     }
     private static int _setRGB(int r, int g, int b) {
+        //limiting the channel values to MAX 8 bit number
         r=Math.min(r, 255);
         g=Math.min(g, 255);
         b=Math.min(b, 255);
