@@ -17,7 +17,7 @@ public class Main {
             return;
         }
 
-        int CONVOLUTIONS = 10;
+        int CONVOLUTIONS = 20;
         for(int i=0; i<CONVOLUTIONS; i++) {
             System.out.println("Starting Iteration "+(i+1)+"...");
             GaussianBlur gb = new GaussianBlur(img);
@@ -25,7 +25,7 @@ public class Main {
             System.out.println("Iteration "+(i+1)+" Completed!");
         }
         try {
-            ImageIO.write(img, "png", new File("result.png"));
+            ImageIO.write(img, "png", new File("output/result.png"));
             System.out.println("Image Saved Successfully!");
         }
         catch(IOException e) {
