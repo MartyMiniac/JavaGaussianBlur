@@ -10,7 +10,7 @@ public class Main {
     public static void main(String args[]) {
         BufferedImage img = null;
         try {
-            img = ImageIO.read(new File("_images/img.jpg"));
+            img = ImageIO.read(new File("_images/img.png"));
         }
         catch(IOException e) {
             e.printStackTrace();
@@ -18,7 +18,7 @@ public class Main {
         }
 
         GaussianBlur gb = new GaussianBlur(img);
-        img = gb.gaussianBlur(10);
+        img = gb.gaussianBlur(20);
 
         try {
             ImageIO.write(img, "png", new File("output/result.png"));
